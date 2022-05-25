@@ -2,6 +2,7 @@ import express from 'express';
 import "reflect-metadata";
 import "express-async-errors";
 import './database';
+
 import {exceptionsHandle} from './middleware/handleExceptions';
 
 import {router} from './routes';
