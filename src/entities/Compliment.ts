@@ -40,8 +40,8 @@ class Compliment{
   tag_id:string;
 
   @JoinColumn({name:"tag_id"})
-  @ManyToOne(()=>User)
-  tagId:Tag;
+  @ManyToOne(()=>Tag)
+  tag:Tag;
 
   @CreateDateColumn()
   created_at:Date;

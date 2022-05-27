@@ -7,10 +7,10 @@ import {ComplimentRequest} from "../dto/ComplimentRequest";
 class ComplimentRepository extends Repository<Compliment> {
 
     
-  async createCompliment(complimentParams:ComplimentRequest): Promise<Compliment>{
-    const compliment =this.create(complimentParams);
-    await this.save(compliment);
-    return compliment;
+  async createCompliment({message,tag_id,user_receiver,user_sender}:ComplimentRequest): Promise<Compliment>{
+     const compliment =this.create({message,tag_id,user_receiver,user_sender});
+      await this.save(compliment);
+      return compliment;    
   }
 
 }

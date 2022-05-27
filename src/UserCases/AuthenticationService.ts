@@ -13,7 +13,7 @@ class AuthenticationService{
     const  usersRepository = getCustomRepository(UsersRepository);
     //verificar se email existe
     const user = await usersRepository.findByEmail(email);
-    console.log(user.email);
+    //console.log(user.email);
 
     if(!user){
       throw new AppErros("Email/password invalid",400);

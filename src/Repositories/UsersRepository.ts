@@ -10,7 +10,7 @@ class UsersRepository extends Repository<User> {
   } 
   
   async findUserById(user_id: string): Promise<User | undefined> {
-    return await this.findOne(user_id);
+    return await this.findOneOrFail(user_id);
 } 
 
   async createUser(userParam:UserRequest): Promise<User>{
